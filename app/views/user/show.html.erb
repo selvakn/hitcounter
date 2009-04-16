@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @user.name %>
+</p>
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>
+<p>
+	<b>Statistics<b>
+	<ul>
+	<% @user.stats.each do |stat| %>
+		<li>
+			<span><%= stat.url %></span>
+			<span> -- <span>
+			<span><%= stat.hit_count %></span>
+		</li>
+	<% end %>
+	</ul>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path %>
