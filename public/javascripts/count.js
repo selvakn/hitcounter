@@ -23,7 +23,7 @@ function callbackfunc(jsonData) {
 	document.getElementById("count").innerHTML = jsonData["stat"]["hit_count"];
 	aObj.removeScriptTag();
 }
-request = 'http://selva.heroku.com/count/admin?url='+window.location.href+'&callback=callbackfunc';
+request = 'http://couter.heroku.com/count/admin?url='+window.location.href+'&callback=callbackfunc';
 aObj = new JSONscriptRequest(request);
 aObj.buildScriptTag();
 aObj.addScriptTag();
